@@ -29,7 +29,7 @@ namespace Project.Controllers
          public IActionResult Index()
         {
             //var products = _context.Products.ToList();
-        coisas
+        coisas e cenas
 
             return View(_context.Products.ToList());
         }
