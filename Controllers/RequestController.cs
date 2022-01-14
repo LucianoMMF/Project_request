@@ -32,7 +32,7 @@ namespace Project.Controllers
             
             else
             {
-                //Console.WriteLine("cenas2");
+                //Console.WriteLine("cenas2"
                 requests = _context.Requests.Where(a => a.ApplicationUser.Id == _userManager.GetUserId(User)).Include(a => a.Product).Include(a => a.ApplicationUser).ToList();
             }
 
