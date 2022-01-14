@@ -23,9 +23,10 @@ namespace Project.Controllers
         {
             var requests=new List<Request>();
 
+
             if (User.IsInRole(WC.AdminRole) || User.IsInRole(WC.CoordinatorRole))
             {
-                //Console.WriteLine("cenas");
+                //Console.WriteLin("cenas");
                 requests = _context.Requests.Include(a=>a.Product).Include(a => a.ApplicationUser).ToList();
             }
             
