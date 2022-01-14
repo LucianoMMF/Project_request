@@ -29,6 +29,7 @@ namespace Project.Controllers
          public IActionResult Index()
         {
             //var products = _context.Products.ToList();
+        coisas
 
             return View(_context.Products.ToList());
         }
