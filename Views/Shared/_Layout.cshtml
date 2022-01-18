@@ -34,6 +34,12 @@
                                 <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Create Coordinator</a>
                             </li>
                         }
+                        @if (User.IsInRole(WC.CoordinatorRH))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Create Employee</a>
+                            </li>
+                        }
                     </ul>
                     <partial name="_LoginPartial" />
                 </div>
