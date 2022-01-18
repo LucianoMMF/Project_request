@@ -1,4 +1,6 @@
 ﻿@model IEnumerable<Project.Models.Product>
+@using Microsoft.AspNetCore.Identity
+@inject UserManager<ApplicationUser> UserManager
 
 @{
     ViewData["Title"] = "Index";
@@ -12,12 +14,23 @@
         <hr />
         @if (User.IsInRole(WC.AdminRole) || User.IsInRole(WC.CoordinatorRole))
         {
-            <div class="row">
-                <div class="col-12">
-                    <a asp-action="Create" class="btn btn-success float-end">Create New</a>
-                </div>
-            </div>
-        }
+            @if (User.IsInRole(WC.CoordinatorRole) == (UserManager.GetUserName(User) == "coodHR@aftebi.pt"))
+                {
+                    <div class="row">
+                        <div class="col-12">
+                   
+                        </div>
+                    </div>   
+                }
+                else
+                {
+                    <div class="row">
+                        <div class="col-12">
+                            <a asp-action="Create" class="btn btn-success float-end">Create New</a>
+                        </div>
+                    </div>
+                }
+           }
 
         <div class="row mt-2">
             @if (Model != null)
@@ -58,12 +71,43 @@
                                         <div class="col-12 d-flex align-item-center justify-content-center">
                                             @if (User.IsInRole(WC.AdminRole) || User.IsInRole(WC.CoordinatorRole))
                                             {
-                                                <a asp-action="Edit" asp-route-id="@item.ProductId" class="btn btn-sm btn-primary mx-1">Edit</a>
+                                                 @if (User.IsInRole(WC.CoordinatorRole) == (UserManager.GetUserName(User) == "coodHR@aftebi.pt"))
+                                                    {
+                                                        <div class="row">
+                                                            <div class="col-12">
+                   
+                                                            </div>
+                                                        </div>   
+                                                    }
+                                                    else
+                                                    {
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                 <a asp-action="Edit" asp-route-id="@item.ProductId" class="btn btn-sm btn-primary mx-1">Edit</a>
+                                                            </div>
+                                                        </div>
+                                                    }
+                                               
                                             }
                                             <a asp-action="Details" asp-route-id="@item.ProductId" class="btn btn-sm btn-success mx-1">Details</a>
                                             @if (User.IsInRole(WC.AdminRole) || User.IsInRole(WC.CoordinatorRole))
                                             {
-                                                <a asp-action="Delete" asp-route-id="@item.ProductId" class="btn btn-sm btn-danger mx-1">Delete</a>
+                                                 @if (User.IsInRole(WC.CoordinatorRole) == (UserManager.GetUserName(User) == "coodHR@aftebi.pt"))
+                                                    {
+                                                        <div class="row">
+                                                            <div class="col-12">
+                   
+                                                            </div>
+                                                        </div>   
+                                                    }
+                                                    else
+                                                    {
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                 <a asp-action="Delete" asp-route-id="@item.ProductId" class="btn btn-sm btn-danger mx-1">Delete</a>
+                                                            </div>
+                                                        </div>
+                                                    }
                                             }
                                         </div>
                                     </div>
