@@ -96,10 +96,14 @@ namespace Project.Areas.Identity.Pages.Account
                 {
                     _logger.LogInformation("User created a new account with password.");
 
-                    if (!User.IsInRole(WC.AdminRole))
+                    /*if (!User.IsInRole(WC.AdminRole))
                     {
                         await _userManager.AddToRoleAsync(user, WC.CoordinatorRH);
-                    }
+                    }*/
+                     if (User.IsInRole(WC.CoordinatorRH))
+                     {
+                        await _userManager.AddToRoleAsync(user, WC.EmployeeRole);
+                     }
                     
                     /*if (User.IsInRole(WC.AdminRole))
                     {
