@@ -106,7 +106,7 @@ namespace Project.Areas.Identity.Pages.Account
                         await _userManager.AddToRoleAsync(user, WC.EmployeeRole);
                     }*/
                     
-                    if (User.IsInRole(WC.AdminRole))
+                    if (!User.IsInRole(WC.AdminRole))
                     {
                         await _userManager.AddToRoleAsync(user, WC.CoordinatorRole);
                     }
