@@ -101,15 +101,15 @@ namespace Project.Areas.Identity.Pages.Account
                         await _userManager.AddToRoleAsync(user, WC.CoordinatorRH);
                     } cenas*/
 
-                     if (User.IsInRole(WC.CoordinatorRH))
-                     {
+                    /*if (User.IsInRole(WC.CoordinatorRH))
+                    {
                         await _userManager.AddToRoleAsync(user, WC.EmployeeRole);
-                     }
+                    }*/
                     
-                    /*if (User.IsInRole(WC.AdminRole))
+                    if (User.IsInRole(WC.AdminRole))
                     {
                         await _userManager.AddToRoleAsync(user, WC.CoordinatorRole);
-                    }*/
+                    }
                     else
                     {
                         await _userManager.AddToRoleAsync(user, WC.EmployeeRole);
