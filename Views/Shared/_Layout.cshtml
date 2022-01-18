@@ -28,18 +28,23 @@
                         <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Request" asp-action="Index">Requests</a>
                             </li>
-                        @if (User.IsInRole(WC.AdminRole))
-                        {
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Create Coordinator</a>
-                            </li>
-                        }
-                        @if (User.IsInRole(WC.CoordinatorRH))
+                        @if (User.IsInRole(WC.CoordinatorRole))
                         {
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Create Employee</a>
                             </li>
                         }
+                        else if (User.IsInRole(WC.AdminRole))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Create Coordinator</a>
+                            </li>
+                        }
+                        else
+                        {
+                           
+                        }
+
                     </ul>
                     <partial name="_LoginPartial" />
                 </div>

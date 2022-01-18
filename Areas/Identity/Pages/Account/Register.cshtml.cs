@@ -98,15 +98,15 @@ namespace Project.Areas.Identity.Pages.Account
 
                     /*if (!User.IsInRole(WC.AdminRole))
                     {
-                        await _userManager.AddToRoleAsync(user, WC.CoordinatorRH);
-                    } cenas*/
+                        await _userManager.AddToRoleAsync(user, WC.CoordinatorHR);
+                    } */
 
-                    /*if (User.IsInRole(WC.CoordinatorRH))
+                    /*if (User.IsInRole(WC.CoordinatorHR))
                     {
                         await _userManager.AddToRoleAsync(user, WC.EmployeeRole);
                     }*/
                     
-                    if (!User.IsInRole(WC.AdminRole))
+                    if (User.IsInRole(WC.AdminRole))
                     {
                         await _userManager.AddToRoleAsync(user, WC.CoordinatorRole);
                     }
