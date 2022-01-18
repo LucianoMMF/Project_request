@@ -29,8 +29,6 @@ namespace Project.Controllers
          public IActionResult Index()
         {
             //var products = _context.Products.ToList();
-   
-
             return View(_context.Products.ToList());
         }
          */
