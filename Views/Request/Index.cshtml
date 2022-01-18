@@ -21,7 +21,7 @@
                             @Html.DisplayNameFor(model => model.QuantityRequest)
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model.TotalAmount)
+                            @Html.DisplayNameFor(model => model.Product.Level)
                         </th>
                         <th>
                             @Html.DisplayNameFor(model => model.Justification)
@@ -52,7 +52,7 @@
                                 @Html.DisplayFor(modelItem => item.QuantityRequest)
                             </td>
                             <td>
-                                @Html.DisplayFor(modelItem => item.TotalAmount)
+                                @Html.DisplayFor(ModelItem => item.Product.Level)
                             </td>
                             <td>
                                 @Html.DisplayFor(modelItem => item.Justification)

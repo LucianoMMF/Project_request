@@ -103,6 +103,19 @@ namespace Project.Controllers
                             product.StockQuantity = product.StockQuantity - req.QuantityRequest;
                         }
                     }
+                    else if (product.Level == Level.Two)
+                    {
+                        if (User.IsInRole(WC.CoordinatorRole))
+                        {
+                            req.RequestStatus = Status.PARTIAL;
+                          
+                        }
+                        else
+                        {
+                            req.RequestStatus = Status.APPROVED;
+                            product.StockQuantity = product.StockQuantity - req.QuantityRequest;
+                        }
+                    }
                     else
                     {
                         if (User.IsInRole(WC.CoordinatorRole))

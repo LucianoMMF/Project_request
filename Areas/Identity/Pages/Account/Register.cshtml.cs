@@ -98,7 +98,7 @@ namespace Project.Areas.Identity.Pages.Account
 
                     /*if (!User.IsInRole(WC.AdminRole))
                     {
-                        await _userManager.AddToRoleAsync(user, WC.CoordinatorHR);
+                        await _userManager.AddToRoleAsync(user, WC.AdminRole);
                     } */
 
                     /*if (User.IsInRole(WC.CoordinatorHR))
