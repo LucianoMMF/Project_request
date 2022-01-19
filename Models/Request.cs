@@ -31,8 +31,5 @@ namespace Project.Models
     {
         PENDING, PARTIAL, APPROVED, REJECTED
     }
-    public enum Statuslvl2
-    {
-        PENDING, PARTIAL, REJECTED
-    }
+    
 }

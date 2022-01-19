@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Project</title>
+    <title>@ViewData["Title"] - ReparaPC Project</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Project.styles.css" asp-append-version="true" />
@@ -31,7 +31,7 @@
                         <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Request" asp-action="Index">Requests</a>
                             </li>
-                        @if (UserManager.GetUserName(User) == "coodHR@aftebi.pt")
+                        @if (UserManager.GetUserName(User) == "coordHR@aftebi.pt")
                         {
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Create Employee</a>
