@@ -14,7 +14,7 @@
         <hr />
         @if (User.IsInRole(WC.AdminRole) || User.IsInRole(WC.CoordinatorRole))
         {
-            @if (User.IsInRole(WC.CoordinatorRole) == (UserManager.GetUserName(User) == "coodHR@aftebi.pt"))
+            @if (User.IsInRole(WC.CoordinatorRole) == (UserManager.GetUserName(User) == "coordHR@aftebi.pt"))
                 {
                     <div class="row">
                         <div class="col-12">
@@ -59,7 +59,7 @@
                                         </label>
                                     </div>
                                     <div class="row">
-                                        <label class="fw-bold">Unitary Amount:<span class="float-end">@item.UnitaryAmount</span></label>
+                                        <label class="fw-bold">Stock Quantity:<span class="float-end">@item.StockQuantity</span></label>
                                     </div>
                                     <div class="row">
                                         <label class="fw-bold">Level:<span class="float-end">@item.Level</span></label>
@@ -71,7 +71,7 @@
                                         <div class="col-12 d-flex align-item-center justify-content-center">
                                             @if (User.IsInRole(WC.AdminRole) || User.IsInRole(WC.CoordinatorRole))
                                             {
-                                                 @if (User.IsInRole(WC.CoordinatorRole) == (UserManager.GetUserName(User) == "coodHR@aftebi.pt"))
+                                                 @if (User.IsInRole(WC.CoordinatorRole) == (UserManager.GetUserName(User) == "coordHR@aftebi.pt"))
                                                     {
                                                         <div class="row">
                                                             <div class="col-12">
@@ -92,7 +92,7 @@
                                             <a asp-action="Details" asp-route-id="@item.ProductId" class="btn btn-sm btn-success mx-1">Details</a>
                                             @if (User.IsInRole(WC.AdminRole) || User.IsInRole(WC.CoordinatorRole))
                                             {
-                                                 @if (User.IsInRole(WC.CoordinatorRole) == (UserManager.GetUserName(User) == "coodHR@aftebi.pt"))
+                                                 @if (User.IsInRole(WC.CoordinatorRole) == (UserManager.GetUserName(User) == "coordHR@aftebi.pt"))
                                                     {
                                                         <div class="row">
                                                             <div class="col-12">
