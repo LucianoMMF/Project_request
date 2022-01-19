@@ -7,6 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\Uploads\2012_ferrari_45820220152822.jpeg" />
+    <Content Remove="wwwroot\Uploads\2012_ferrari_45820224713573.jpeg" />
+    <Content Remove="wwwroot\Uploads\bic-black20221806038.jpg" />
+    <Content Remove="wwwroot\Uploads\hp-probook20220000348.jpg" />
+    <Content Remove="wwwroot\Uploads\pepal-a420225713542.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.1" />
     <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="6.0.1" />
