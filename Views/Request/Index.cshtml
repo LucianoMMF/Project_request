@@ -78,6 +78,13 @@
                                         <a asp-action="Delete" asp-route-id="@item.RequestId" class="btn btn-danger btn-sm mx-1">Delete</a>
                                     </td>
                                 }
+                                else if (item.ApplicationUserId == UserManager.GetUserId(User))
+                                {
+                                    <td>
+                                        <a asp-action="Delete" asp-route-id="@item.RequestId" class="btn btn-danger btn-sm mx-1">Delete</a>
+                                    </td>
+                                }
+
                             }
                         </tr>
                     }
